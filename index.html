@@ -40,10 +40,101 @@
             </div>
         </div>
     </header>
-        aca va el formulario   
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-100">
+                <h1>LISTADO DE TAREAS</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-20">
+                <form id="form">
+                    <div class="row-c">
+                        <input type="hidden" name="id" id="inputTaskId">
+                        <div class="col">
+                            <label for="inputTaskTitle">Título</label>
+                            <input type="text" placeholder="Título" class="form-control" id="inputTaskTitle" required>
+                        </div>
+                        <div class="col">
+                            <label for="inputTaskAuthor">Autor</label>
+                            <input type="text" placeholder="Autor" class="form-control" id="inputTaskAuthor" required>
+                        </div>
+                        <div class="col">
+                            <label for="inputTaskDate">Fecha</label>
+                            <input type="date" placeholder="Date" class="form-control" id="inputTaskDate" required>
+                        </div>
+                        <div class="col">
+                            <div class="row">
+                                <label for="inputTaskIsComplete">Tarea completada</label>
+                                <input id="inputTaskIsComplete" type="checkbox">
+                            </div>
+                        </div>
+                        <button class="btn btn-sm btn-primary" type="button" onclick="save()">
+                            <p>Guardar Tarea</p>
+                        </button>
+                        <button class="btn btn-sm btn-primary" type="button" onclick="clearData()">
+                            <p>Resetear</p>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-80">
+                <h2>Sin completar</h2>
+                <div style="overflow-x:auto;">
+                    <table id="datatable" class="">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Título</th>
+                                <th>Autor</th>
+                                <th>Fecha</th>
+                                <th>Completar</th>       
+                                <th>Editar</th>
+                                <th>Eliminar</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table">
+                        </tbody>
+                    </table>
+                </div><hr>
+                <h2>Read</h2>
+                <div style="overflow-x:auto;">
+                    <table id="datatable" class="">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Título</th>
+                                <th>Autor</th>
+                                <th>Fecha</th>
+                                <th>Completar</th>       
+                                <th>Editar</th>
+                                <th>Eliminar</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table2">
+                        </tbody>
+                    </table>
+              </div>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <p>© 2022 U Camp. Elaborado por Danilo Vega.</p>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="./index.js"></script>
+    <script>
+        allData()
+    </script>
+    <script>
+        function clearData(){
+            document.getElementById('form').reset()
+            document.getElementById('id').value = ""
+        }
+    </script>
 </body>
     
 </html>

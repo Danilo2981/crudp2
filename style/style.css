@@ -2,11 +2,11 @@
     box-sizing: border-box;
 }
 
+
+
 body {
     font-family: 'Poppins', sans-serif;
 }
-
-
 
 /****** HEADER ******/
 header {
@@ -65,10 +65,167 @@ header .row {
     color: gold;
 }
 
+
+/* FORMULARIO */
+
+.row {
+    display: flex;
+}
+
+.row-c {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    margin: 10px;
+    border-radius: 6px;
+    height: 78vh;
+    background-color: #212F3D;
+    padding: 10px;
+}
+
+.container .col-100 {
+    flex: 100%;
+    border-radius: 6px;
+    background-color: aliceblue;
+}
+
+.container h1 {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 10px;
+    padding: 5px;
+}
+
+.container .col-20 {
+    flex: 20%;
+    height: 65vh;
+    margin: 10px 2px 20px 2px;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: aliceblue;
+}
+
+.container .col-80 {
+    flex: 80%;
+    height: 65vh;
+    margin: 10px 1px 20px 5px;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: aliceblue;
+}
+
+.row-c .col {
+    font-size: 0.9rem;
+    padding: 5px;
+    margin: 2px;
+}
+
+.row-c .col input {
+    width: 100%; 
+	height: 30px; 
+	border-radius: 5px;  
+	border-style: solid; 
+	border-width: 1px; 
+	border-color: #ab4493; 
+	margin-top: 2px;  
+	padding-left: 5px;
+    margin-bottom: 5px; 
+}
+
+::-webkit-input-placeholder {
+    color: #a8a8a8;
+   }
+   
+.row-c input:focus{
+    outline:0;
+    border: 1px solid #97d848;
+}
+
+#inputTaskIsComplete {
+   margin-top: 1px;
+   margin-left: 30px;
+   width: 15px;
+   height: 15px;
+}
+
+button {
+    height: 40px; 
+	padding-left: 5px;
+	padding-right: 5px; 	
+	margin-bottom: 20px; 
+	margin-top: 10px; 	
+	text-transform: uppercase;
+	background-color: #ab4493; 
+	border-color: #ab4493; 
+	border-style: solid; 
+	border-radius: 10px;	
+	width: 100%;   
+    cursor: pointer;
+}
+
+button p{
+	color: #fff; 
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}  
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.col-80 h2 {
+    margin-top: 2px;
+    margin-bottom: 10px;
+}
+
+/* CSS SCRIPT */
+
+.imgLogo{
+    height: 50px;
+    width: 120px;
+}
+
+a:hover{
+   text-decoration: none;
+    color: navy;
+    font-weight: bold;
+}
+
+#slide-out li a:hover{
+    color: navy;
+    font-weight: bold;
+}
+
+.divCenter{
+    margin: auto;
+    width: 50%;
+}
+
+.modal-body .form-horizontal{
+    width: 100%;
+}
+
+/* FOOTER */
+
 footer {
     text-align: center;
-    color: grey;
 }
+
+
+
 
 @media only screen and (max-width: 600px) {
     body {
