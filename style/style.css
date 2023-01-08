@@ -110,6 +110,7 @@ header .row {
 
 .container .col-80 {
     flex: 80%;
+    overflow: auto;
     height: 65vh;
     margin: 10px 1px 20px 5px;
     padding: 10px;
@@ -178,7 +179,8 @@ table {
 }
 
 th, td {
-    text-align: left;
+    font-size: 0.9rem;
+    text-align: center;
     padding: 8px;
 }  
 
@@ -189,6 +191,37 @@ tr:nth-child(even) {
 .col-80 h2 {
     margin-top: 2px;
     margin-bottom: 10px;
+}
+
+
+.btn-table {
+    height: 30px; 
+	padding-left: 5px;
+	padding-right: 5px; 	
+	text-transform: uppercase;
+	border-style: solid; 
+	border-radius: 10px;	
+	width: 50px;   
+    cursor: pointer;
+}
+
+.btn-table.btn-complete {
+    background-color: green; 
+	border-color: green; 
+}
+
+.btn-table.btn-edit {
+    background-color: orange; 
+	border-color: orange; 
+}
+
+.btn-table.btn-delete {
+    background-color: red; 
+	border-color: red; 
+}
+
+.btn-table .fa {
+    color: #f2f2f2;
 }
 
 /* CSS SCRIPT */
@@ -254,7 +287,22 @@ footer {
         display: none;
     }
 
+    .container {
+        overflow: auto;
+    }
 
+    .container .col-20 {
+        flex: 100%;
+    }
+    
+    .row-responsive {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container .col-80 {
+        flex: 100%
+    }
 
     footer {
         font-size: 0.8rem;

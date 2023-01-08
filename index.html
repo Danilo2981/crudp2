@@ -47,14 +47,14 @@
                 <h1>LISTADO DE TAREAS</h1>
             </div>
         </div>
-        <div class="row">
+        <div class="row row-responsive">
             <div class="col-20">
                 <form id="form">
                     <div class="row-c">
                         <input type="hidden" name="id" id="inputTaskId">
                         <div class="col">
-                            <label for="inputTaskTitle">Título</label>
-                            <input type="text" placeholder="Título" class="form-control" id="inputTaskTitle" required>
+                            <label for="inputTaskTitle">Tarea</label>
+                            <input type="text" placeholder="Tarea" class="form-control" id="inputTaskTitle" required>
                         </div>
                         <div class="col">
                             <label for="inputTaskAuthor">Autor</label>
@@ -70,10 +70,10 @@
                                 <input id="inputTaskIsComplete" type="checkbox">
                             </div>
                         </div>
-                        <button class="btn btn-sm btn-primary" type="button" onclick="save()">
+                        <button class="" type="button" onclick="save()">
                             <p>Guardar Tarea</p>
                         </button>
-                        <button class="btn btn-sm btn-primary" type="button" onclick="clearData()">
+                        <button class="" type="button" onclick="clearData()">
                             <p>Resetear</p>
                         </button>
                     </div>
@@ -86,7 +86,7 @@
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Título</th>
+                                <th>Tarea</th>
                                 <th>Autor</th>
                                 <th>Fecha</th>
                                 <th>Completar</th>       
@@ -98,16 +98,16 @@
                         </tbody>
                     </table>
                 </div><hr>
-                <h2>Read</h2>
+                <h2>Completadas</h2>
                 <div style="overflow-x:auto;">
                     <table id="datatable" class="">
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Título</th>
+                                <th>Tarea</th>
                                 <th>Autor</th>
                                 <th>Fecha</th>
-                                <th>Completar</th>       
+                                <th>Descompletar</th>       
                                 <th>Editar</th>
                                 <th>Eliminar</th>
                             </tr>
@@ -132,7 +132,7 @@
     <script>
         function clearData(){
             document.getElementById('form').reset()
-            document.getElementById('id').value = ""
+            document.getElementById('id').value = ''
         }
     </script>
 </body>
