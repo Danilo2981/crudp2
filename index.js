@@ -4,7 +4,7 @@ function save(){
         taskList = JSON.parse(localStorage.getItem('listItem3')) ?? []
         var id
         taskList.length != 0 ? taskList.findLast((item) => id = item.id) : id = 0
-    
+        
         if(document.getElementById('inputTaskId').value){
             taskList.forEach(value => {
                 if(document.getElementById('inputTaskId').value == value.id){
@@ -14,6 +14,7 @@ function save(){
                     value.isComplete    = 1
                 }
             });
+        
             document.getElementById('id').value = ''
         }else{
             var item = {
@@ -155,12 +156,14 @@ function find(id){
 }
 
 function complete(id1,title1,author1,date1){
+    const fecha = new Date(date1);
+    const fechaFormateada = fecha.toISOString().substring(0, 10);
     if(id1){
         var item = [{
             id          : id1, 
             title       : title1, 
             author      : author1, 
-            date        : date1, 
+            date        : fechaFormateada, 
             isComplete  : 1,
         }];   
         taskList = JSON.parse(localStorage.getItem('listItem3')) ?? []
@@ -177,12 +180,14 @@ function complete(id1,title1,author1,date1){
     allData()
 }
 function complete2(id1,title1,author1,date1){
+    const fecha = new Date(date1);
+    const fechaFormateada = fecha.toISOString().substring(0, 10);
     if(id1){
         var item = [{
             id          : id1, 
             title       : title1, 
             author      : author1, 
-            date        : date1, 
+            date        : fechaFormateada, 
             isComplete  : 1,
         }];   
         taskList = JSON.parse(localStorage.getItem('listItem4')) ?? []
