@@ -224,32 +224,6 @@ tr:nth-child(even) {
     color: #f2f2f2;
 }
 
-/* CSS SCRIPT */
-
-.imgLogo{
-    height: 50px;
-    width: 120px;
-}
-
-a:hover{
-   text-decoration: none;
-    color: navy;
-    font-weight: bold;
-}
-
-#slide-out li a:hover{
-    color: navy;
-    font-weight: bold;
-}
-
-.divCenter{
-    margin: auto;
-    width: 50%;
-}
-
-.modal-body .form-horizontal{
-    width: 100%;
-}
 
 /* FOOTER */
 
